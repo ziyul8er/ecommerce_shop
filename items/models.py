@@ -12,11 +12,12 @@ class Category(models.Model):
         return self.name
 
 class Item(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField(blank=True)
     category = models.ForeignKey(Category, related_name='items', on_delete=models.CASCADE)
-    image = models.URLField(max_length=200)
+    image = models.ImageField(upload_to='items', blank=True, null=True)
     rate = models.DecimalField(max_digits=2, decimal_places=1)
     count = models.IntegerField()
     slug = models.SlugField(unique=True)

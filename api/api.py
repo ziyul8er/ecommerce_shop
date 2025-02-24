@@ -1,5 +1,5 @@
 from ninja import NinjaAPI
-from .models import Item
+from items.models import Item
 from .schemas import ItemSchema
 
 api = NinjaAPI()
