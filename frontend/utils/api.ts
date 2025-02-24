@@ -2,8 +2,14 @@ const API_URL = "http://localhost:8000/api"; // This is the URL to your Django N
 
 export interface Item {
   id: number;
-  name: string;
+  title: string;
+  price: number;
   description: string;
+  category: string;
+  image: string;
+  rate: number;
+  count: number;
+  slug: string;
 }
 
 export async function fetchItems(): Promise<Item[]> {
