@@ -9,7 +9,6 @@ items = requests.get(url).json()
 # factory section 🏭
 
 for item in items:
-    print(item['rating']['rate'])
     Item.objects.create(
         title= item['title'],
         price= item['price'],
