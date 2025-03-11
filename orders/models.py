@@ -1,5 +1,4 @@
 from django.db import models
-from django.urls import reverse
 from users.models import Address, User
 from items.models import Item
 
